@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crypto Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 text-white transition-colors duration-300 min-h-screen p-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex justify-between items-center mb-4">
+      <h1 class="text-3xl font-bold">Crypto Dashboard</h1>
+      <button id="toggleMode" class="px-4 py-2 rounded-md border border-gray-600">
+        Light Mode
+      </button>
+    </div>
+
+    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+      <input type="text" id="searchInput" placeholder="Search coin..." class="w-full sm:w-1/2 px-4 py-2 rounded-md border bg-gray-900 text-white border-gray-700">
+      <select id="timeRange" class="px-4 py-2 rounded-md border bg-gray-900 text-white border-gray-700">
+        
+        <option value="1" selected>1 Day</option>
+        <option value="15" >15 Days</option> 
+        <option value="30">30 Days</option>
+      </select>
+      
+      <button id="trendingToggle" class="px-4 py-2 rounded-md border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition">
+        View Trending Coins
+      </button>
+    </div>
+
+    <div id="contentArea"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
